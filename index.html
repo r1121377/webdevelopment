@@ -2,88 +2,52 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Web Development I</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalistische HTML5 Site</title>
 </head>
 <body>
-<h1>Web Development I</h1>
-</body>
-</html>
-<!doctype html>
-<html lang="nl">
-<head>
-    <meta charset="utf-8">
-    <title>Labo 2 - Uitgewerkt Verslag</title>
-</head>
-<body>
-<h1>Web Development I - Labo 2</h1>
-<p>Uitgewerkte oplossingen voor opdrachten 2.6 t.e.m. 2.19.</p>
+<header>
+    <h1>Welkom op mijn minimalistische site</h1>
+</header>
 
-<ul>
-    <li><b>2.6 Voorbeelden</b><br>
-        <a href="#">&lt;p&gt;Dit is een eenvoudige paragraaf&lt;/p&gt;</a><br>
-        <a href="https://www.example.com">dit is een link</a><br>
-        <a href="#">&lt;p&gt;Dit is een paragraaf &lt;a href='https://www.example.com'&gt;met een hyperlink&lt;/a&gt; en tekst&lt;/p&gt;</a>
-    </li>
+<main>
+    <!-- Eenvoudige paragraaf -->
+    <p>Dit is een eenvoudige paragraaf.</p>
 
-    <li><b>2.7 file:// vs http://</b><br>
-        <a href="#">file:// opent lokaal bestand zonder server</a><br>
-        <a href="#">http://localhost gebruikt een server en ondersteunt cookies en requests</a>
-    </li>
+    <!-- Paragraaf met hyperlink -->
+    <p>
+        <a href="https://www.example.com">Dit is een link naar www.example.com</a>
+    </p>
 
-    <li><b>2.8 Whitespace</b><br>
-        <a href="#">Extra spaties of lege regels hebben geen invloed</a><br>
-        <a href="#">Gebruik &amp;nbsp; voor extra spaties en &lt;br&gt; voor een nieuwe regel</a>
-    </li>
+    <!-- Geneste elementen -->
+    <p>
+        Dit is een eenvoudige paragraaf
+        <a href="https://www.example.com">met een hyperlink</a>
+        en nog wat meer tekst.
+    </p>
 
-    <li><b>2.9 Entities</b><br>
-        <a href="#">Gebruik &amp;amp;nbsp; en &amp;lt;br /&amp;gt; niet voor lay-out — daarvoor gebruiken we CSS</a>
-    </li>
+    <!-- Extra spaties en regels -->
+    <p>Woorden&nbsp;&nbsp;met&nbsp;extra&nbsp;spaties</p>
+    <p>Regel 1<br />Regel 2<br />Regel 3</p>
 
-    <li><b>2.10 Correct genest</b><br>
-        <a href="#">Enkel (4x(2+2)) is correct genest — andere missen haakjes of sluiten verkeerd af</a>
-    </li>
+    <!-- Geaccentueerde tekst -->
+    <p>Gebruik <strong>strong</strong> voor nadruk en <em>em</em> voor cursief.</p>
 
-    <li><b>2.11 Mix van haakjes</b>
-        <ul>
-            <li><a href="#">({}[]) - correct</a></li>
-            <li><a href="#">{{{()] - fout</a></li>
-            <li><a href="#">({()}) - correct</a></li>
-            <li><a href="#">(){[}] - fout</a></li>
-            <li><a href="#">{{([]) - fout</a></li>
-        </ul>
-    </li>
+    <!-- Lijsten -->
+    <h2>Voorbeeld lijst</h2>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
 
-    <li><b>2.12 Foutieve nesting</b><br>
-        <a href="#">Fout: &lt;strong&gt; opent in &lt;span&gt; maar sluit na &lt;a&gt;</a><br>
-        <a href="#">Correct: &lt;span&gt;hier komt een &lt;strong&gt;&lt;a href=''&gt;link&lt;/a&gt;&lt;/strong&gt; te staan&lt;/span&gt;</a>
-    </li>
+    <!-- Afbeelding -->
+    <h2>Voorbeeld afbeelding</h2>
+    <img src="images/voorbeeld.jpg" alt="Voorbeeld afbeelding" width="300">
+</main>
 
-    <li><b>2.13 Headings</b><br>
-        <a href="#">&lt;h1&gt;Titel 1&lt;/h1&gt;</a><br>
-        <a href="#">&lt;h2&gt;Titel 2&lt;/h2&gt;</a><br>
-        <a href="#">&lt;h3&gt;Titel 3&lt;/h3&gt;</a><br>
-        <a href="images/example.jpg">Afbeelding voorbeeld</a>
-    </li>
-
-    <li><b>2.14 Lijstfout</b><br>
-        <a href="#">&lt;ol&gt; moet binnen &lt;li&gt; staan</a><br>
-        <a href="#">Correct: &lt;ul&gt;&lt;li&gt;twee&lt;ol&gt;&lt;li&gt;jan&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ul&gt;</a>
-    </li>
-
-    <li><b>2.15 Website vs Webapplicatie</b><br>
-        <a href="#">Website = informatief</a><br>
-        <a href="#">Webapplicatie = interactief met data-opslag</a><br>
-        <a href="#">Gevoelige data hoort op de server</a>
-    </li>
-
-    <li><b>2.18 Microsoft</b><br>
-        <a href="https://www.microsoft.com">Taalinstelling wordt opgeslagen in cookies of localStorage (bekijk via Chrome Developer Tools)</a>
-    </li>
-
-    <li><b>2.19 LG &amp; Amazon</b><br>
-        <a href="https://www.lg.com">LG gebruikt localStorage voor selectie</a><br>
-        <a href="https://www.amazon.com">Amazon bewaart winkelwagen server-side en koppelt via cookie-ID</a>
-    </li>
-</ul>
+<footer>
+    <p>© 2025 Minimalistische Site</p>
+</footer>
 </body>
 </html>
