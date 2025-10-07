@@ -18,59 +18,72 @@
 <h1>Web Development I - Labo 2</h1>
 <p>Uitgewerkte oplossingen voor opdrachten 2.6 t.e.m. 2.19.</p>
 
-<h2>2.6 Voorbeelden</h2>
-<p>1. &lt;p&gt;Dit is een eenvoudige paragraaf&lt;/p&gt;<br>
-    2. &lt;a href="https://www.example.com"&gt;dit is een link&lt;/a&gt;<br>
-    3. &lt;p&gt;Dit is een paragraaf &lt;a href="https://www.example.com"&gt;met een hyperlink&lt;/a&gt; en tekst&lt;/p&gt;</p>
-
-<h2>2.7 file:// vs http://</h2>
-<p><b>file://</b> opent lokaal bestand zonder server. <b>http://localhost</b> gebruikt een server. Lokaal gedrag (zoals cookies of fetch) verschilt.</p>
-
-<h2>2.8 Whitespace</h2>
-<p>Extra spaties of lege regels hebben geen invloed. Gebruik &amp;nbsp; voor extra spaties en &lt;br&gt; voor een nieuwe regel.</p>
-
-<h2>2.9 Entities</h2>
-<p>Gebruik &amp;amp;nbsp; en &amp;lt;br /&amp;gt; echter niet voor lay-out, daarvoor gebruiken we CSS.</p>
-
-<h2>2.10 Correct genest</h2>
-<p>Enkel (4x(2+2)) is correct genest. De andere missen haakjes of sluiten verkeerd af.</p>
-
-<h2>2.11 Mix van haakjes</h2>
 <ul>
-    <li>({}[]) - correct</li>
-    <li>{{{()] - fout</li>
-    <li>({()}) - correct</li>
-    <li>(){[}] - fout</li>
-    <li>{{([]) - fout</li>
+    <li><b>2.6 Voorbeelden</b><br>
+        <a href="#">&lt;p&gt;Dit is een eenvoudige paragraaf&lt;/p&gt;</a><br>
+        <a href="https://www.example.com">dit is een link</a><br>
+        <a href="#">&lt;p&gt;Dit is een paragraaf &lt;a href='https://www.example.com'&gt;met een hyperlink&lt;/a&gt; en tekst&lt;/p&gt;</a>
+    </li>
+
+    <li><b>2.7 file:// vs http://</b><br>
+        <a href="#">file:// opent lokaal bestand zonder server</a><br>
+        <a href="#">http://localhost gebruikt een server en ondersteunt cookies en requests</a>
+    </li>
+
+    <li><b>2.8 Whitespace</b><br>
+        <a href="#">Extra spaties of lege regels hebben geen invloed</a><br>
+        <a href="#">Gebruik &amp;nbsp; voor extra spaties en &lt;br&gt; voor een nieuwe regel</a>
+    </li>
+
+    <li><b>2.9 Entities</b><br>
+        <a href="#">Gebruik &amp;amp;nbsp; en &amp;lt;br /&amp;gt; niet voor lay-out — daarvoor gebruiken we CSS</a>
+    </li>
+
+    <li><b>2.10 Correct genest</b><br>
+        <a href="#">Enkel (4x(2+2)) is correct genest — andere missen haakjes of sluiten verkeerd af</a>
+    </li>
+
+    <li><b>2.11 Mix van haakjes</b>
+        <ul>
+            <li><a href="#">({}[]) - correct</a></li>
+            <li><a href="#">{{{()] - fout</a></li>
+            <li><a href="#">({()}) - correct</a></li>
+            <li><a href="#">(){[}] - fout</a></li>
+            <li><a href="#">{{([]) - fout</a></li>
+        </ul>
+    </li>
+
+    <li><b>2.12 Foutieve nesting</b><br>
+        <a href="#">Fout: &lt;strong&gt; opent in &lt;span&gt; maar sluit na &lt;a&gt;</a><br>
+        <a href="#">Correct: &lt;span&gt;hier komt een &lt;strong&gt;&lt;a href=''&gt;link&lt;/a&gt;&lt;/strong&gt; te staan&lt;/span&gt;</a>
+    </li>
+
+    <li><b>2.13 Headings</b><br>
+        <a href="#">&lt;h1&gt;Titel 1&lt;/h1&gt;</a><br>
+        <a href="#">&lt;h2&gt;Titel 2&lt;/h2&gt;</a><br>
+        <a href="#">&lt;h3&gt;Titel 3&lt;/h3&gt;</a><br>
+        <a href="images/example.jpg">Afbeelding voorbeeld</a>
+    </li>
+
+    <li><b>2.14 Lijstfout</b><br>
+        <a href="#">&lt;ol&gt; moet binnen &lt;li&gt; staan</a><br>
+        <a href="#">Correct: &lt;ul&gt;&lt;li&gt;twee&lt;ol&gt;&lt;li&gt;jan&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ul&gt;</a>
+    </li>
+
+    <li><b>2.15 Website vs Webapplicatie</b><br>
+        <a href="#">Website = informatief</a><br>
+        <a href="#">Webapplicatie = interactief met data-opslag</a><br>
+        <a href="#">Gevoelige data hoort op de server</a>
+    </li>
+
+    <li><b>2.18 Microsoft</b><br>
+        <a href="https://www.microsoft.com">Taalinstelling wordt opgeslagen in cookies of localStorage (bekijk via Chrome Developer Tools)</a>
+    </li>
+
+    <li><b>2.19 LG &amp; Amazon</b><br>
+        <a href="https://www.lg.com">LG gebruikt localStorage voor selectie</a><br>
+        <a href="https://www.amazon.com">Amazon bewaart winkelwagen server-side en koppelt via cookie-ID</a>
+    </li>
 </ul>
-
-<h2>2.12 Foutieve nesting</h2>
-<p>Fout: &lt;strong&gt; opent in een &lt;span&gt; maar sluit na &lt;a&gt;. Correct:</p>
-<pre>&lt;span&gt;hier komt een &lt;strong&gt;&lt;a href=""&gt;link&lt;/a&gt;&lt;/strong&gt; te staan&lt;/span&gt;</pre>
-
-<h2>2.13 Headings</h2>
-<pre>&lt;h1&gt;Titel 1&lt;/h1&gt;
-&lt;h2&gt;Titel 2&lt;/h2&gt;
-&lt;h3&gt;Titel 3&lt;/h3&gt;
-&lt;img src="images/example.jpg" alt="voorbeeld"&gt;</pre>
-
-<h2>2.14 Lijstfout</h2>
-<p>&lt;ol&gt; moet binnen &lt;li&gt; staan. Correct:</p>
-<pre>&lt;ul&gt;
-&lt;li&gt;twee
-  &lt;ol&gt;
-    &lt;li&gt;jan&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<h2>2.15 Website vs Webapplicatie</h2>
-<p>Website = informatief. Webapplicatie = interactief met data-opslag. Gevoelige data hoort op de server.</p>
-
-<h2>2.18 Microsoft</h2>
-<p>Taalinstelling wordt opgeslagen in cookies of localStorage. Te bekijken via Chrome Developer Tools.</p>
-
-<h2>2.19 LG &amp; Amazon</h2>
-<p>LG gebruikt localStorage voor selectie. Amazon bewaart winkelwagenserver-side en koppelt via cookie-ID.</p>
 </body>
 </html>
