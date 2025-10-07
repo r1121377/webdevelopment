@@ -8,3 +8,226 @@
 <h1>Web Development I</h1>
 </body>
 </html>
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Web Development I — Labo 2 (Uitgewerkt verslag)</title>
+    <style>
+        /* Minimalistische, leesvriendelijke styling geschikt voor GitHub Pages */
+        :root{--max:900px;--muted:#666}
+        body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.5;color:#111;padding:32px;display:flex;justify-content:center}
+        .wrap{max-width:var(--max)}
+        header{margin-bottom:18px}
+        h1{font-size:1.6rem;margin:0}
+        h2{font-size:1.15rem;margin-top:28px;margin-bottom:6px}
+        p.lead{color:var(--muted)}
+        pre{background:#f5f5f5;padding:12px;border-radius:6px;overflow:auto}
+        code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:0.95rem}
+        .opdracht{border-left:4px solid #ddd;padding:12px 16px;margin:14px 0;border-radius:4px;background:#fafafa}
+        .small{font-size:0.9rem;color:var(--muted)}
+        footer{margin-top:28px;color:var(--muted);font-size:0.9rem}
+        img.example{max-width:100%;height:auto;border:1px solid #eee;padding:6px;background:white}
+    </style>
+</head>
+<body>
+<main class="wrap">
+    <header>
+        <h1>Web Development I — Labo 2</h1>
+        <p class="lead">Uitgewerkt labo-verslag en oefenoplossingen (opdrachten 2.6 t.e.m. 2.19). Minimalistische HTML-pagina, geschikt om direct op GitHub Pages te publiceren.</p>
+    </header>
+
+    <section>
+        <h2>Instructies — Hoe te gebruiken</h2>
+        <p class="small">Plaats dit bestand in de root van je repository (of in een submap). Voeg eventueel een map <code>images/</code> toe voor gebruikte afbeeldingen. Commit &amp; push naar GitHub. Activeer GitHub Pages via de repository-instellingen (branch <code>main</code> of <code>gh-pages</code>).</p>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.6 — Voorbeelden plaatsen</h2>
+        <p>Plaats telkens één van de volgende voorbeelden in het <code>&lt;body&gt;</code>-element en bekijk in de browser.</p>
+
+        <h3>Voorbeeld 1 — eenvoudige paragraaf</h3>
+        <pre><code>&lt;p&gt;Dit is een eenvoudige paragraaf&lt;/p&gt;</code></pre>
+
+        <h3>Voorbeeld 2 — link</h3>
+        <pre><code>&lt;a href="https://www.example.com"&gt;dit is een link naar www.example.com&lt;/a&gt;</code></pre>
+
+        <h3>Voorbeeld 3 — paragraaf met geneste hyperlink</h3>
+        <pre><code>&lt;p&gt;Dit is een eenvoudige paragraaf &lt;a href="https://www.example.com"&gt;met een hyperlink&lt;/a&gt; en nog wat meer tekst&lt;/p&gt;</code></pre>
+
+        <p class="small">Tip: ververs de pagina in Chrome (F5) nadat je het bestand hebt opgeslagen.</p>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.7 — file:// vs http:// (localhost:63342)</h2>
+        <p>Er zijn twee manieren om een lokaal HTML-bestand in de browser te openen:</p>
+        <ul>
+            <li><strong>file://</strong> — via dubbelklikken in de bestandsverkenner; de browser leest direct van je schijf. Geen webserver betrokken.</li>
+            <li><strong>http://localhost:63342</strong> — via een lokale webserver (bv. WebStorm of een eenvoudige dev-server). Hierdoor wordt de pagina via HTTP geserveerd en gelden dezelfde origin-/CORS-regels als op een echte server.</li>
+        </ul>
+        <p>Belangrijk verschil: bij <code>file://</code> kunnen sommige web-API's of relatieve padgedragingen anders werken (bv. fetch(), modules, sommige service workers). Werken via <code>http://localhost</code> is dichter bij echte productie-omstandigheden.</p>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.8 — Whitespace demonstratie</h2>
+        <p>HTML negeert extra whitespace (meerdere spaties en regeleinden). Enkele manieren om extra ruimte te forceren:</p>
+        <ul>
+            <li><code>&amp;nbsp;</code> — non-breaking space (forceert extra spatie)</li>
+            <li><code>&lt;br /&gt;</code> — expliciete regeleinde</li>
+        </ul>
+
+        <h3>Voorbeeld:</h3>
+        <pre><code>&lt;p&gt;Eén  extra    spatie (meerdere spaties worden samengevat)&lt;/p&gt;
+&lt;p&gt;Woord1&lt;br /&gt;Woord2 (hier is een expliciete nieuwe regel)&lt;/p&gt;
+&lt;p&gt;WoordA&nbsp;&nbsp;WoordB (hier gebruiken we twee &amp;nbsp;)&lt;/p&gt;</code></pre>
+
+        <p class="small">Gebruik <code>&amp;nbsp;</code> en <code>&lt;br /&gt;</code> spaarzaam — voor lay-out gebruik je CSS.</p>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.9 — Entities gebruiken</h2>
+        <p>Maak een HTML-document met de volgende tekst (let op: bepaalde tekens moet je escapen of als entity schrijven):</p>
+        <blockquote>
+            Gebruik &amp;nbsp; en &lt;br /&gt; echter niet voor lay-out doeleinden, daarvoor gebruiken
+            we immers CSS!
+        </blockquote>
+
+        <p>Voorbeeld HTML (let op escaping):</p>
+        <pre><code>&lt;p&gt;Gebruik &amp;amp;nbsp; en &amp;lt;br /&amp;gt; echter niet voor lay-out doeleinden, daarvoor gebruiken&lt;br /&gt;we immers CSS!&lt;/p&gt;</code></pre>
+
+        <p class="small">Uitleg: in HTML moet je &amp; tekenen en onderdeeltekens zoals &lt; en &gt; escapen wanneer ze in platte tekst voorkomen.</p>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.10 — Correct genest (haakjes)</h2>
+        <p>Waarom zijn volgende uitdrukkingen niet correct genest?</p>
+        <ul>
+            <li><code>(4x2 + 2(</code> — er is een open haakje '(' zonder bijbehorende sluiting.</li>
+            <li><code>(4x2( +2</code> — zelfde probleem: er blijven ongepaarde open haakjes over.</li>
+            <li><code>(4x(2+2)</code> — dit is correct genest: elke open haak heeft een bijbehorende sluiting in de juiste volgorde.</li>
+            <li><code>(4x(2+2()</code> — onjuist: extra sluitingshaakje ontbreekt of de volgorde is verkeerd.</li>
+        </ul>
+
+        <p class="small">Algemene regel: bij het doorlopen van de tekst mag je nooit afsluiten met een ander haaktype dan het laatst geopende (LIFO-principe).</p>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.11 — Mix van haakjes () {} [] — correct genest?</h2>
+        <p>Beantwoordingen:</p>
+        <ul>
+            <li><code>({}[])</code> — correct genest. Open '(', open '{' &amp; close '}', open '[' &amp; close ']', close ')'.</li>
+            <li><code>{{{()]</code> — onjuist: er is een sluitende ']' voor de corresponderende '[' en de nesting wordt gebroken.</li>
+            <li><code>({()})</code> — (in voorbeeld input stond '({()})' of '({()})'?) Als de vraag was <code>({()})</code> dan is het correct: ( { ( ) } ).</li>
+            <li><code>(){[}]</code> — onjuist: het gedeelte <code>{[}]</code> is niet correct, de ']' sluit niet het laatst geopende '[' op de juiste manier.</li>
+            <li><code>{{([])</code> — onjuist: één of meerdere sluitende haakjes missen of de volgorde is verkeerd.</li>
+        </ul>
+
+        <p class="small">Kort: controleer altijd met een stack-model (laatste open haak wordt eerst gesloten).</p>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.12 — Foutieve nesting van <code>&lt;strong&gt;</code></h2>
+        <p>Gegeven fragment:</p>
+        <pre><code>&lt;span&gt;hier komt een&lt;/span&gt;&lt;a href=""&gt;link&lt;/a&gt;&lt;span&gt; te staan&lt;/span&gt;</code></pre>
+
+        <p>Auteur wil 'een link' benadrukken en veranderde naar:</p>
+        <pre><code>&lt;span&gt;hier komt &lt;strong&gt;een&lt;/span&gt;&lt;a href=""&gt;link&lt;/a&gt;&lt;/strong&gt;&lt;span&gt; te staan&lt;/span&gt;</code></pre>
+
+        <p>Waarom fout? Omdat tags niet correct genest zijn: de <code>&lt;strong&gt;</code> tag wordt geopend binnen de eerste &lt;span&gt; maar gesloten ná de &lt;a&gt; tag — dat breekt de LIFO-regel.</p>
+
+        <p>Correcte versie — twee mogelijkheden:</p>
+        <pre><code>&lt;!-- Optie A: Voeg &lt;strong&gt; rond de volledige tekst &lt;span&gt;een link&lt;/span&gt; --&gt;
+&lt;span&gt;hier komt &lt;strong&gt;een &lt;a href=""&gt;link&lt;/a&gt;&lt;/strong&gt; te staan&lt;/span&gt;
+
+&lt;!-- Optie B: Plaats &lt;strong&gt; uitsluitend om de link zelf --&gt;
+&lt;span&gt;hier komt een &lt;strong&gt;&lt;a href=""&gt;link&lt;/a&gt;&lt;/strong&gt; te staan&lt;/span&gt;</code></pre>
+
+        <p class="small">Belangrijk: zorg dat tags correct genest zijn — sluit eerst de laatst geopende tag.</p>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.13 — Reproduceer headings voorbeeld</h2>
+        <p>Maak een pagina met headings (gebruik HTML5 basisstructuur). Voorbeeld:</p>
+        <pre><code>&lt;!doctype html&gt;
+&lt;html lang="nl"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Voorbeeld Headings&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Heading niveau 1&lt;/h1&gt;
+  &lt;h2&gt;Heading niveau 2&lt;/h2&gt;
+  &lt;h3&gt;Heading niveau 3&lt;/h3&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>Voeg een afbeelding toe in een folder <code>images/</code> en verwijs naar <code>images/naam.jpg</code>. Als je de afbeelding verplaatst, pas dan het <code>src</code>-attribuut aan.</p>
+        <p><img src="images/placeholder.png" alt="voorbeeld afbeelding" class="example"/></p>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.14 — Wat is verkeerd in het HTML-fragment?</h2>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;een&lt;/li&gt;
+  &lt;li&gt;twee&lt;/li&gt;
+  &lt;ol&gt;
+    &lt;li&gt;jan&lt;/li&gt;
+    &lt;li&gt;piet&lt;/li&gt;
+    &lt;li&gt;joris&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;li&gt;vier&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <p>Probleem: een &lt;ol&gt; is geopend binnen een &lt;ul&gt; zonder juiste nesting of afsluiting van de &lt;ul&gt; list. Als het bedoeling is een genest nummerlijk lijstje te hebben, moet het &lt;ol&gt; genest worden binnen een &lt;li&gt; of de lists moeten correct gesloten worden.</p>
+
+        <p>Correct voor geneste lijst:</p>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;een&lt;/li&gt;
+  &lt;li&gt;twee
+    &lt;ol&gt;
+      &lt;li&gt;jan&lt;/li&gt;
+      &lt;li&gt;piet&lt;/li&gt;
+      &lt;li&gt;joris&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;vier&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.15–2.17 — Website vs Webapplicatie (samenvatting)</h2>
+        <p><strong>Website</strong>: verzameling documenten, voornamelijk informatief. Kan statisch (HTML-bestanden) of dynamisch (gegenereerd per request) zijn.</p>
+        <p><strong>Webapplicatie</strong>: biedt functionaliteit en complexe interactie (bv. winkelwagen, gebruikersprofielen). Data wordt vaak zowel in de browser als op de server opgeslagen, afhankelijk van het doel en veiligheidseisen.</p>
+        <p class="small">Belangrijk: gevoelige gegevens altijd server-side bewaren; client-side opslag (localStorage, cookies, indexedDB) is makkelijk maar niet veilig tegen manipulatie of lokale toegang.</p>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.18 — Microsoft &amp; local storage / cookies</h2>
+        <p>Wat je ziet in Chrome Developer Tools (Application tab):</p>
+        <ul>
+            <li><strong>Local Storage</strong>: key-value opslag die persistent blijft voor hetzelfde origin en niet automatisch met elke request naar de server gestuurd wordt.</li>
+            <li><strong>Cookies</strong>: worden vaak gebruikt voor sessies, voorkeuren en small state; cookies worden standaard meegestuurd bij HTTP requests (afhankelijk van domain, path en flags).</li>
+        </ul>
+        <p>Als je de regiotaal van een site wijzigt, wordt dat vaak opgeslagen in een cookie of in localStorage — kijk in DevTools onder de betreffende domain-entry om exact te zien waar (soms wordt ook server-side voorkeur ingesteld en aangevuld met een cookie).</p>
+    </section>
+
+    <section class="opdracht">
+        <h2>Opdracht 2.19 — LG &amp; Amazon (localStorage / cookies / winkelwagen)</h2>
+        <p>LG-vergelijkfunctie: veel sites bewaren tijdelijke selectie (bv. welke items je hebt aangevinkt) in <strong>localStorage</strong> of in cookies zodat de selectie over meerdere pagina's behouden blijft. Open DevTools &gt; Application &gt; Local Storage om de key-value paren te inspecteren.</p>
+
+        <p>Amazon en winkelwagen zonder inloggen:</p>
+        <ul>
+            <li>Als je niet ingelogd bent, gebruikt Amazon meestal een combinatie van een <strong>server-side winkelwagen</strong> gekoppeld aan een unieke identifier en een <strong>cookie</strong> (bv. session cookie) om die identifier op jouw browser te bewaren.</li>
+            <li>Dat betekent: bij toevoegen van een product verstuurt de server een ID naar jouw browser (cookie). Later kan Amazon die cookie lezen en de corresponderende winkelwagen ophalen op de server.</li>
+        </ul>
+
+        <p class="small">Kort: vaak is de winkelwagen niet volledig in localStorage/cookies opgeslagen — alleen een verwijzing (ID) die de server naar de juiste server-side data laat verwijzen.</p>
+    </section>
+
+    <footer>
+        <p>Dit document is bedoeld als basis en naslag. Als je akkoord gaat met deze uitgewerkte versie, maak ik het bijbehorende standalone HTML-bestand (als downloadbaar bestand) en daarna de PDF-versie.</p>
+    </footer>
+</main>
+</body>
+</html>
