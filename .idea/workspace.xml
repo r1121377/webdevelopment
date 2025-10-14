@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0aaccf08-5755-455b-b561-46d51ceb8a5f" name="Changes" comment="" />
+    <list default="true" id="0aaccf08-5755-455b-b561-46d51ceb8a5f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Labo_2/labo_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Labo_3/labo_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Labo_4/labo_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Labo_5/labo_5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +39,9 @@
     &quot;accountId&quot;: &quot;1ea4e7c4-03e5-49cc-89cb-532be47ed4b2&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -75,7 +85,7 @@
       <updated>1759848102442</updated>
       <workItem from="1759848104477" duration="1693000" />
       <workItem from="1760377145110" duration="3414000" />
-      <workItem from="1760450254373" duration="306000" />
+      <workItem from="1760450254373" duration="2825000" />
     </task>
     <servers />
   </component>
